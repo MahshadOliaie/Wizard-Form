@@ -43,7 +43,7 @@ function ActivityLevel() {
                 </div>
             </form>
 
-            <NextBtn onClick={handleSubmit(submit)}/>
+            <NextBtn onClick={handleSubmit(submit)} step={4}/>
         </>
     )
 }

@@ -4,8 +4,9 @@ import Information from "../../context/Information/Information";
 import { useForm } from "react-hook-form";
 
 function PersonalInfo() {
-    const { setPersonalInfo , personalInfo } = useContext(Information)
+    const { setPersonalInfo } = useContext(Information)
     const { register, handleSubmit } = useForm()
+ 
 
     function submit(data) {
         console.log(data)
@@ -20,7 +21,7 @@ function PersonalInfo() {
                 <input {...register("email")} type="email" placeholder="example@email.com" className="bg-gray-50 p-3 shadow-inner rounded-xl" />
                 <input {...register("password")} type="password" placeholder="password" className="bg-gray-50 p-3 shadow-inner rounded-xl" />
             </form>
-            <NextBtn onClick={handleSubmit(submit)} />
+            <NextBtn onClick={handleSubmit(submit)} step={2} />
         </>
     )
 }

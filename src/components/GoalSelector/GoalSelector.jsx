@@ -33,7 +33,7 @@ function GoalSelector() {
                 </div>
             </form>
 
-            <NextBtn onClick={handleSubmit(submit)} />
+            <NextBtn onClick={handleSubmit(submit)} state={"Done"}/>
 
         </>
     )

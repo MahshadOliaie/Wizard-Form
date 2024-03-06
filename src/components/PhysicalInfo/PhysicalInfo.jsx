@@ -26,7 +26,7 @@ function PhysicalInfo() {
                         <label htmlFor="female">female</label></div>
                 </div>
             </form>
-            <NextBtn onClick={handleSubmit(submit)} />
+            <NextBtn onClick={handleSubmit(submit)} step={3} />
         </>
     )
 }

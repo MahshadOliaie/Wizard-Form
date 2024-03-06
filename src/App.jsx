@@ -1,11 +1,11 @@
 import { useState } from "react"
 import ActivityLevel from "./components/ActivityLevel/ActivityLevel"
 import GoalSelector from "./components/GoalSelector/GoalSelector"
-import NextBtn from "./components/NextBtn/NextBtn"
 import PersonalInfo from "./components/PersonalInfo/PersonalInfo"
 import PhysicalInfo from "./components/PhysicalInfo/PhysicalInfo"
 import StepBar from "./components/StepBar/StepBar"
 import Information from "./context/Information/Information"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState({})
@@ -28,10 +28,14 @@ function App() {
       }}>
         <StepBar />
         <div className="flex flex-col mx-auto w-4/5 ps-5">
-          {/* <PersonalInfo /> */}
-          {/* <PhysicalInfo /> */}
-          <ActivityLevel/>
-          {/* <GoalSelector /> */}
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<PersonalInfo />} />
+              <Route path="/step/2" element={<PhysicalInfo />} />
+              <Route path="/step/3" element={<ActivityLevel />} />
+              <Route path="/step/4" element={<GoalSelector />} />
+            </Routes>
+          </BrowserRouter>
         </div>
       </Information.Provider>
     </>
