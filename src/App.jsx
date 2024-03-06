@@ -6,6 +6,7 @@ import PhysicalInfo from "./components/PhysicalInfo/PhysicalInfo"
 import StepBar from "./components/StepBar/StepBar"
 import Information from "./context/Information/Information"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import ShowCalory from "./components/ShowCalory/ShowCalory"
 
 function App() {
   const [personalInfo, setPersonalInfo] = useState({})
@@ -34,6 +35,7 @@ function App() {
               <Route path="/2" element={<PhysicalInfo />} />
               <Route path="/3" element={<ActivityLevel />} />
               <Route path="/4" element={<GoalSelector />} />
+              <Route path="/result" element={<ShowCalory />} />
             </Routes>
           </BrowserRouter>
         </div>

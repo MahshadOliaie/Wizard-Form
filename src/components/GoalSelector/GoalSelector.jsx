@@ -33,10 +33,10 @@ function GoalSelector() {
                     <label htmlFor="cut">Fat loss</label>
                 </div>
             </form>
-            
+
             <div className="flex justify-between">
                 <PreviousBtn step={3} />
-                <NextBtn onClick={handleSubmit(submit)} state={"Done"} />
+                <NextBtn onClick={handleSubmit(submit)} state={"Done"} step={"result"}/>
             </div>
 
 
