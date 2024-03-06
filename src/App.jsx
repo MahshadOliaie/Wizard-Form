@@ -31,9 +31,9 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<PersonalInfo />} />
-              <Route path="/step/2" element={<PhysicalInfo />} />
-              <Route path="/step/3" element={<ActivityLevel />} />
-              <Route path="/step/4" element={<GoalSelector />} />
+              <Route path="/2" element={<PhysicalInfo />} />
+              <Route path="/3" element={<ActivityLevel />} />
+              <Route path="/4" element={<GoalSelector />} />
             </Routes>
           </BrowserRouter>
         </div>
