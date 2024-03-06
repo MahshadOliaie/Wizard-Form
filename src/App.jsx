@@ -1,9 +1,11 @@
 import PersonalInfo from "./components/PersonalInfo/PersonalInfo"
+import StepBar from "./components/StepBar/StepBar"
 
-function App(){
-  return(
+function App() {
+  return (
     <>
-    <PersonalInfo/>
+      <StepBar />
+      <PersonalInfo />
     </>
   )
 }
