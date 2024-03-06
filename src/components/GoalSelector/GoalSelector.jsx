@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form"
 import NextBtn from "../NextBtn/NextBtn"
 import { useContext } from "react"
 import Information from "../../context/Information/Information"
+import PreviousBtn from "../PreviousBtn/PreviousBtn"
 
 
 function GoalSelector() {
@@ -32,8 +33,12 @@ function GoalSelector() {
                     <label htmlFor="cut">Fat loss</label>
                 </div>
             </form>
+            
+            <div className="flex justify-between">
+                <PreviousBtn step={3} />
+                <NextBtn onClick={handleSubmit(submit)} state={"Done"} />
+            </div>
 
-            <NextBtn onClick={handleSubmit(submit)} state={"Done"}/>
 
         </>
     )

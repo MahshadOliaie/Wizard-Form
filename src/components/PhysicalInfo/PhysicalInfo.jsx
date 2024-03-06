@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import Information from "../../context/Information/Information";
 import NextBtn from "../NextBtn/NextBtn";
+import PreviousBtn from "../PreviousBtn/PreviousBtn";
 
 
 function PhysicalInfo() {
@@ -26,7 +27,10 @@ function PhysicalInfo() {
                         <label htmlFor="female">female</label></div>
                 </div>
             </form>
-            <NextBtn onClick={handleSubmit(submit)} step={3} />
+            <div className="flex w-full justify-between">
+                <PreviousBtn step={" "} />
+                <NextBtn onClick={handleSubmit(submit)} step={3} />
+            </div>
         </>
     )
 }

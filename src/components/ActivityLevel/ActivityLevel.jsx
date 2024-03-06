@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { useForm } from "react-hook-form"
 import Information from "../../context/Information/Information"
 import NextBtn from "../NextBtn/NextBtn"
+import PreviousBtn from "../PreviousBtn/PreviousBtn"
 
 
 function ActivityLevel() {
@@ -43,7 +44,10 @@ function ActivityLevel() {
                 </div>
             </form>
 
-            <NextBtn onClick={handleSubmit(submit)} step={4}/>
+            <div className="flex justify-between">
+                <PreviousBtn step={2} />
+                <NextBtn onClick={handleSubmit(submit)} step={4} />
+            </div>
         </>
     )
 }
