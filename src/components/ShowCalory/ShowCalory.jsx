@@ -11,7 +11,7 @@ function ShowCalory() {
         "five": 1.9
     }
 
-    const { physicalInfo, goal, activityLevel } = useContext(Information)
+    const { personalInfo, physicalInfo, goal, activityLevel } = useContext(Information)
     let formula = (10 * physicalInfo.weight) + (6.25 * physicalInfo.height) - (5 * physicalInfo.age)
     let BMR = (physicalInfo.gender == "male") ? formula + 5 : formula - 161
     let maintainCalory = Math.ceil(BMR * activityLevelsNumber[activityLevel.activityLevel])
@@ -24,12 +24,11 @@ function ShowCalory() {
     }
 
     return (
-        <>
-            <p className="text-2xl font-medium my-5">
-                you should take
-                <span className="text-3xl">{Math.ceil(goals[goal.goal])}</span>
-                calories per day</p>
-        </>
+        <div className="flex flex-col items-center pt-20">
+            <h1 className="text-2xl font-medium my-10">Welcome {personalInfo.name}</h1>
+            <p className="text-xl font-medium my-5">this is your Calorie Budget:</p>
+            <div className="text-3xl bg-blue-200 mt-10 w-44 h-44 rounded-full shadow-lg flex items-center justify-center">{Math.ceil(goals[goal.goal])}</div>
+        </div>
     )
 }
 

@@ -6,11 +6,10 @@ import PreviousBtn from "../PreviousBtn/PreviousBtn"
 
 
 function ActivityLevel({setStep}) {
-    const { register, handleSubmit , setValue } = useForm()
+    const { handleSubmit , setValue } = useForm()
     const { setActivityLevel } = useContext(Information)
 
     function submitActivity(data) {
-        console.log(data)
         setActivityLevel(data)
     }
 
