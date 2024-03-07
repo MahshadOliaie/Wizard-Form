@@ -5,7 +5,7 @@ import NextBtn from "../NextBtn/NextBtn"
 import PreviousBtn from "../PreviousBtn/PreviousBtn"
 
 
-function ActivityLevel() {
+function ActivityLevel({setStep}) {
     const { register, handleSubmit } = useForm()
     const { setActivityLevel } = useContext(Information)
 
@@ -45,7 +45,7 @@ function ActivityLevel() {
             </form>
 
             <div className="flex justify-between">
-                <PreviousBtn step={2} />
+                <PreviousBtn step={2}  setStep={setStep} />
                 <NextBtn onClick={handleSubmit(submit)} step={4} />
             </div>
         </>

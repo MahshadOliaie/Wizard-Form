@@ -9,7 +9,6 @@ function PersonalInfo() {
  
 
     function submit(data) {
-        console.log(data)
         setPersonalInfo(data)
     }
 

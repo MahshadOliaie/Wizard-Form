@@ -5,12 +5,11 @@ import Information from "../../context/Information/Information"
 import PreviousBtn from "../PreviousBtn/PreviousBtn"
 
 
-function GoalSelector() {
+function GoalSelector({setStep}) {
     const { register, handleSubmit } = useForm()
     const { setGoal } = useContext(Information)
 
     function submit(data) {
-        console.log(data)
         setGoal(data)
     }
 
@@ -35,7 +34,7 @@ function GoalSelector() {
             </form>
 
             <div className="flex justify-between">
-                <PreviousBtn step={3} />
+                <PreviousBtn step={3} setStep={setStep} />
                 <NextBtn onClick={handleSubmit(submit)} state={"Done"} step={"result"}/>
             </div>
 
