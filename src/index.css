@@ -1,0 +1,15 @@
+
+
+body{
+    background: linear-gradient(20deg , rgb(78, 102, 164) , rgba(124, 137, 192, 0.101) , transparent);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: 100% 100%;
+    animation: bg 5s infinite alternate ease-in-out;
+}
+
+@keyframes bg {
+    100%{ 
+        background-size: 100% 150%;
+    }
+}
