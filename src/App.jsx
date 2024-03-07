@@ -15,7 +15,6 @@ function App() {
   const [goal, setGoal] = useState("")
   const [step, setStep] = useState("/")
 
-
   return (
     <>
       <Information.Provider value={{
@@ -28,14 +27,14 @@ function App() {
         goal,
         setGoal
       }}>
-        <StepBar step={step} />
+
         <div className="flex flex-col mx-auto w-4/5 ps-5">
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<PersonalInfo />} />
-              <Route path="/2" element={<PhysicalInfo setStep={setStep} />} />
-              <Route path="/3" element={<ActivityLevel setStep={setStep} />} />
-              <Route path="/4" element={<GoalSelector setStep={setStep} />} />
+              <Route path="/" element={<> <StepBar step={step} /> <PersonalInfo /></>} />
+              <Route path="/2" element={<> <StepBar step={step} /> <PhysicalInfo setStep={setStep} /></>} />
+              <Route path="/3" element={<> <StepBar step={step} /> <ActivityLevel setStep={setStep} /></>} />
+              <Route path="/4" element={<> <StepBar step={step} /> <GoalSelector setStep={setStep} /></>} />
               <Route path="/result" element={<ShowCalory />} />
             </Routes>
           </BrowserRouter>
